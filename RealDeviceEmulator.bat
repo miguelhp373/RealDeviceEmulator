@@ -31,6 +31,8 @@ adb devices
 
 @PAUSE
 
+EXIT
+
 
 
 :CONNECT
