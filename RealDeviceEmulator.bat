@@ -46,7 +46,7 @@ ECHO ---------------------------------------------------
 SET /P $COPTIONS=CASO TENHA CONECTADO O CABO, DIGITE 'S', PARA PROSSEGUIR:
 
 IF $COPTIONS EQU S OR $COPTIONS EQU s GOTO CONNECTINI
-IF $COPTIONS REQ S OR $COPTIONS REQ s EXIT
+IF $COPTIONS NEQ S OR $COPTIONS NEQ s EXIT
  
 
 
@@ -55,10 +55,12 @@ IF $COPTIONS REQ S OR $COPTIONS REQ s EXIT
 CLS
 
 ECHO PRONTO! AGORA E SO ESPERAR, ESTAMOS CONFIGURANDO PARA VOCE.
+ECHO -----------------------------------------------------------
 
 cd C:\Users\migue\AppData\Local\Android\Sdk\platform-tools
 
 adb tcpip 5555
+
 
 @PAUSE
 
