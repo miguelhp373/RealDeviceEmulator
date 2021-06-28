@@ -64,15 +64,16 @@ adb tcpip 5555
 
 @PAUSE
 
-@ECHO ON
+CLS
+
 
 adb shell ip -f inet addr show wlan0
 
-SET /P $userip= AGORA VOCÊ IRA DIGITAR O IP ENCOTRADO ACIMA, EXEMPLO: (INET '192.168.0.111') :
+
+ECHO ----------------------------------------------------------------------------------------------------------
+SET /P $userip= AGORA VOCE IRA DIGITAR O IP ENCOTRADO ACIMA, EXEMPLO(inet '192.168.0.111'), DEMONSTRADO NA SEGUNDA LINHA :
 
 adb connect %$userip%:5555
-
-@ECHO OFF
 
 CLS
 
